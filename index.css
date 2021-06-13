@@ -1,0 +1,146 @@
+.main {
+  text-align: center;
+}
+
+.content {
+  padding: 100px 0 40px 0;
+  text-align: center;
+}
+
+.bg{
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    position: fixed;
+    z-index: -999;
+    opacity: 0.8;
+}
+
+h1 {
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: 4em;
+  font-weight: 400;
+  margin: 30px 0;
+}
+
+h3 {
+  color: white;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.container {
+  display: inline-flex;
+  color: white;
+}
+
+
+.avatar {
+    position: relative;
+    height: 200px;
+    border: 3px solid white;
+    border-radius: 100%;
+    filter: brightness(90%);
+}
+
+.avatar:hover{
+    filter: brightness(100%);
+}
+
+.contentBox{
+    display: flex;
+}
+
+@media (max-width: 1024px) {
+   .contentBox {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    }
+}
+
+@media (max-width: 768px) {
+   .contentBox {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    }
+}
+
+.iconBox{
+    position: relative;
+    border-radius: 100%;
+    border: 2px transparent;
+    margin: 20px;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    padding: .2em .25em;
+}
+
+.iconBox img{
+    width: 32px;
+    height: 32px;
+    padding: 15px;
+   opacity: .4;
+}
+
+.icon {
+    position: relative;
+    border-radius: 100%;
+    border: 2px transparent;
+    width: 65px;
+    height: 65px;
+    overflow: hidden;
+}
+
+.wave {
+  opacity: .4;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  width: 250px;
+  height: 250px;
+  margin-left: -150px;
+  margin-bottom: -260px;
+  transform-origin: 50% 48%;
+  border: 3px solid #333;
+  border-radius: 10px;
+  
+  transition-duration: 1s;
+  transition-property: margin-bottom;
+  transition-timing-function: ease;
+}
+
+.iconBox:hover .wave {
+    margin-bottom: -150px;
+  }
+
+.iconBox:hover img{
+   opacity: 1;
+  transition-duration: 1s;
+}
+
+#tooltip {
+    display: none;
+}
+
+.iconBox a .tooltipImg {
+    display: none;
+}
+
+.iconBox a:hover .tooltipImg {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 240px;
+    height: 160px;
+} 
