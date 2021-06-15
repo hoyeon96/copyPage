@@ -64,12 +64,28 @@ h3 {
     display: grid;
     grid-template-columns: repeat(4, 2fr);
     }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h3 {
+      font-size: 0.75em;
+    }
 }
 
 @media (max-width: 768px) {
    .contentBox {
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(2, 4fr);
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h3 {
+      font-size: 0.75em;
     }
 }
 
@@ -143,4 +159,5 @@ h3 {
     left: 0;
     width: 240px;
     height: 160px;
+    z-index: 999;
 } 
